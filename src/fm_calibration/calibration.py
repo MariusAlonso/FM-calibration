@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 import sys
 
-from .metrics import mc_brier_score
+from metrics import mc_brier_score
 
 
 class IsotonicRegressionMulticlass:
@@ -95,8 +95,8 @@ def temperature_scaling_fitter(confidences, trues_in):
     ).numpy()
 
 
-sys.path.append("group_calibration")
-from group_calibration.methods.mix_calibration import calibrate as ets_calibrate
+sys.path.append("/mnt/data_1/home_tsteam/malonso/group_calibration")
+from methods.mix_calibration import calibrate as ets_calibrate
 
 
 def ets_fitter(confidences, trues):

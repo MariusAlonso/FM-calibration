@@ -4,6 +4,8 @@
 
 ## Setup
 
+Package requires python 3.12, as well as libraries listed in `requirements.txt`. Moreover, `https://github.com/ThyrixYang/group_calibration` package is required.
+
 Experiment data can be downloaded using notebooks contained in `./data`
 
 ## Usage
