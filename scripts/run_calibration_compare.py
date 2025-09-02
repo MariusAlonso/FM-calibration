@@ -288,6 +288,8 @@ for I in tqdm.tqdm(range(len(datasets))):
     res_table.append([datasets[I], "smECE", "global", smece(y_cal_prior, y_test)])
     res_table.append([datasets[I], "ACE", "global", ace(y_cal_prior, y_test)])
 
+    # Proposed clustering method
+
     ct = ClusteredTemperature(nb_clusters=2, nb_ensembles=100, dim_frac=32)
     ct.fit(
         x_val,
@@ -306,6 +308,8 @@ for I in tqdm.tqdm(range(len(datasets))):
     res_table.append([datasets[I], "smECE", "kmeans", smece(y_cal_test_2, y_test)])
     res_table.append([datasets[I], "ACE", "kmeans", ace(y_cal_test_2, y_test)])
 
+    # https://arxiv.org/abs/2102.10809
+
     # for gamma in [0.2,0.3,0.6,1.0,2.0]:
     #     for sigma in [1,2,3,5,8,12,20]: # [0.2,0.3,0.6,1.0,2.0]:
     #         pt = LocalCalib(gamma=gamma, n_bins=sigma, sigma=0.01, dim_reduce=32)
@@ -316,8 +320,9 @@ for I in tqdm.tqdm(range(len(datasets))):
     #         res_table.append([datasets[I], 'Brier', f'g{gamma}s{sigma}', mc_brier_score(y_cal_test_4, y_test)])
     #         res_table.append([datasets[I], 'ECE', f'g{gamma}s{sigma}', ece(y_cal_test_4, y_test)])
 
-    N_val = len(x_val)
+    # https://arxiv.org/abs/2306.04985
 
+    N_val = len(x_val)
     res = calibrate_combine(
         torch.tensor(x_val[: N_val // 4]).float(),
         torch.tensor(np.log(y_pred_val[: N_val // 4])).float(),
