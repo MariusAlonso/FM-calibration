@@ -2,9 +2,10 @@
 
 (Local) calibration and foundation models. See submission `paper/neurips_2025.pdf`.
 
-![nice plot](paper/group-calibration-motivation-plot.pdf)
 
-![nice plot](paper/othertemps.pdf)
+![nice plot](paper/threetemps.pdf)
+
+![nice plot](paper/imdbtemps2.png)
 
 ## Setup
 
