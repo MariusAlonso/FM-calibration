@@ -13,6 +13,6 @@ Experiment data can be downloaded using notebooks contained in `./data`
 
 Various (local) calibration methods are applied on classification task in notebook `local_calibration.ipynb`.
 
-![nice plot](paper/threetemps.png)
+![nice plot](paper/three_temps.png)
 
 ![nice plot](paper/imdbtemps2.png)
