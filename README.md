@@ -1,6 +1,6 @@
 # FM-calibration
 
-(Local) calibration and foundation models.
+(Local) calibration and foundation models. See submission `paper/neurips_2025.pdf`.
 
 ## Setup
 
