@@ -1,6 +1,6 @@
 # FM-calibration
 
-(Local) calibration and foundation models. See submission `paper/neurips_2025.pdf`.
+Local calibration and Foundation Models (FMs).
 
 
 ## Setup
@@ -13,6 +13,18 @@ Experiment data can be downloaded using notebooks contained in `./data`
 
 Various (local) calibration methods are applied on classification task in notebook `local_calibration.ipynb`.
 
+
+### Synthetic classification problems
+
+`src/fm_calibration/synthetic_data.py` provides a way to generate synthetic classification tasks where linear classifier exhibits natural locally-dependent calibration. See below such example of generated data.
+
+
 ![nice plot](paper/three_temps.png)
+
+### Local recalibration
+
+We propose a local recalibration method based on clustering of embedding space of FMs. We also compare with <https://arxiv.org/abs/2102.10809>, <https://arxiv.org/abs/2306.04985>.
+
+See below example of local temperature scaling.
 
 ![nice plot](paper/imdbtemps2.png)
