@@ -2,6 +2,10 @@
 
 (Local) calibration and foundation models. See submission `paper/neurips_2025.pdf`.
 
+![nice plot](`paper/group-calibration-motivation-plot.pdf`)
+
+![nice plot](`paper/othertemps.pdf`)
+
 ## Setup
 
 Package requires python 3.12, as well as libraries listed in `requirements.txt`. Moreover, `https://github.com/ThyrixYang/group_calibration` package is required.
